@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Sending file through ICMP Package using PING
+# Sending file through ICMP packet using PING
 
 # function to read file and convert from ascii into hexadecimal
 read_file(){

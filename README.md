@@ -1,2 +1,3 @@
 # evilPing
-Send file behind ICMP packet
+Sending file through ICMP packet using PING
+
