@@ -57,7 +57,7 @@ if [[ $check_up == "ping"* ]]; then
 fi
 
 if [[ $check_up != *"1 received"* ]]; then
-  echo "[ERROR] check your connection or is host $2 is correct?";
+  echo "[ERROR] check your connection. is host $2 already correct?";
   exit 1;
 fi
 
