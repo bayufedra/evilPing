@@ -44,4 +44,4 @@ with open('output', 'wb') as w:
 ```
 
 #### legal disclaimer
-This tools is for educational purpose only, usage of evilPing for attacking targets without prior mutual consent is illegal. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+This tools is for educational purpose only. usage of evilPing for attacking targets without prior mutual consent is illegal and developers assume no liability and are not responsible for any misuse or damage caused by this program.
