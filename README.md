@@ -35,7 +35,7 @@ src_ip = '192.168.56.1'
 packet = rdpcap('evilPing-received.pcap')
 data = b''
 
-for pkt in packet:
+for pkt in packet[1:]:
     if pkt[IP].src == src_ip and pkt[ICMP].type == 8:
         data += pkt[Raw].load[16:32]
 
