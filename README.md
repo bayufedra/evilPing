@@ -1,7 +1,7 @@
 # evilPing
 Sending file through ICMP packet using PING
 
-
+This tools will convert the data into hexadecimal and send through ICMP packet in each block. if the connection not stable or any packet failed to send, the script will retry sending the failed data first before go to the next block data
 
 ### Usage
 ```
