@@ -19,7 +19,7 @@ sudo tcpdump -i any -s 0 'icmp' -w evilPing-received.pcap
 
 ### Extract data with tshark
 ```
-tshark -r evilPing-received.pcap -T fields -e data -Y ip.src==192.168.56.1 -Y icmp.type==8 | tail -n +2 | cut -c 17-48 | xxd -r -p
+tshark -r evilPing-received.pcap -T fields -e data -Y "ip.src==192.168.56.1 && icmp.type==8" | tail -n +2 | cut -c 17-48 | xxd -r -p
 ```
 ![Result](img/result.png)
 
