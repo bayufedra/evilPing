@@ -19,7 +19,8 @@ padding_data(){
 
 # function to ping 1 time to host
 is_up(){
-  check_ping=$( { ping -c 1 $1; } 2>&1);
+  dummy=$(printf "%0${BLOCK_SIZE}d");
+  check_ping=$( { ping -c 1 -p $dummy $1; } 2>&1);
   echo $check_ping
 }
 
