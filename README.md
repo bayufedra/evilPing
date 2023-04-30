@@ -11,6 +11,12 @@ Example
 ```
 ![Running](img/test.png)
 
+### Listening and extract data using evilPingListener.py
+```
+sudo python3 evilPingListener.py -s 192.168.56.1 --output passwd
+```
+![Listen](img/epl.png)
+
 ### Listening server for receiving ICMP packet using TCPdump
 ```
 sudo tcpdump -i any -s 0 'icmp' -w evilPing-received.pcap
